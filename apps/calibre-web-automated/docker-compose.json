@@ -2,7 +2,7 @@
   "services": [
     {
       "name": "calibre-web-automated",
-      "image": "crocodilestick/calibre-web-automated:3.1.4",
+      "image": "crocodilestick/calibre-web-automated:latest",
       "isMain": true,
       "internalPort": 8083,
       "environment": [
@@ -21,6 +21,10 @@
         {
           "key": "NETWORK_SHARE_MODE",
           "value": "false"
+        },
+        {
+          "key": "HARDCOVER_TOKEN",
+          "value": "your_hardcover_api_key_here"
         }
       ],
       "volumes": [
@@ -29,16 +33,16 @@
           "containerPath": "/config"
         },
         {
-          "hostPath": "${APP_DATA_DIR}/data/calibre-library",
-          "containerPath": "/calibre-library"
-        },
-        {
           "hostPath": "${APP_DATA_DIR}/data/ingest",
           "containerPath": "/cwa-book-ingest"
         },
         {
-          "hostPath": "${APP_DATA_DIR}/data/processed",
-          "containerPath": "/config/processed_books"
+          "hostPath": "${APP_DATA_DIR}/data/calibre-library",
+          "containerPath": "/calibre-library"
+        },
+        {
+          "hostPath": "${APP_DATA_DIR}/data/plugins",
+          "containerPath": "/config/.config/calibre/plugins"
         }
       ]
     }
