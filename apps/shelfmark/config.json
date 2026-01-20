@@ -1,0 +1,20 @@
+{
+  "name": "Shelfmark - Book Management System",
+  "available": true,
+  "exposable": true,
+  "dynamic_config": true,
+  "port": 8084,
+  "tipi_version": 16,
+  "version": "1.0.0",
+  "id": "shelfmark",
+  "categories": ["books", "media"],
+  "description": "Shelfmark is a self-hosted book management and organization system. It provides a modern interface for managing your digital book collection with automatic downloading, organization, and metadata management capabilities.",
+  "short_desc": "Self-hosted book management system with automatic download and organization.",
+  "author": "https://github.com/calibrain/",
+  "source": "https://github.com/calibrain/shelfmark",
+  "form_fields": [],
+  "supported_architectures": ["arm64", "amd64"],
+  "created_at": 1737331200000,
+  "updated_at": 1737331200000,
+  "min_tipi_version": "4.5.0"
+}
