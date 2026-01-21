@@ -7,7 +7,7 @@
   "tipi_version": 16,
   "version": "6.1",
   "id": "languagetool",
-  "categories": ["writing"],
+  "categories": ["utilities"],
   "description": "LanguageTool is a free online spell checker, style, and grammar checker that supports multiple languages. It helps you detect spelling errors, grammar issues, and style suggestions for your writing.",
   "short_desc": "Free open-source grammar, spell, and style checker for multiple languages",
   "author": "https://github.com/languagetoolorg/",
