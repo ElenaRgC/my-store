@@ -64,7 +64,24 @@ describe("each app should have a valid docker-compose.json", async () => {
   for (const app of apps) {
     test(`app ${app} should have a valid docker-compose.json`, async () => {
       const fileContent = await getFile(app, 'docker-compose.json')
-      const parsed = dynamicComposeSchema.safeParse(JSON.parse(fileContent || '{}'))
+      const content = JSON.parse(fileContent || '{}')
+      
+      // Normalize environment arrays to objects for schema validation
+      if (content.services && Array.isArray(content.services)) {
+        content.services = content.services.map((service: any) => {
+          if (Array.isArray(service.environment)) {
+            // Convert array format [{ key, value }] to object format { key: value }
+            const envObj: Record<string, string> = {}
+            service.environment.forEach((env: { key: string; value: string }) => {
+              envObj[env.key] = env.value
+            })
+            return { ...service, environment: envObj }
+          }
+          return service
+        })
+      }
+      
+      const parsed = dynamicComposeSchema.safeParse(content)
 
       if (!parsed.success) {
         const validationError = fromError(parsed.error);
