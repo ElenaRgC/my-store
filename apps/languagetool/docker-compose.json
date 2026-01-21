@@ -5,20 +5,11 @@
       "image": "meyay/languagetool:latest",
       "isMain": true,
       "internalPort": 8081,
-      "environment": [
-        {
-          "key": "download_ngrams_for_langs",
-          "value": "en"
-        },
-        {
-          "key": "JAVA_XMS",
-          "value": "256m"
-        },
-        {
-          "key": "JAVA_XMX",
-          "value": "1536m"
-        }
-      ],
+      "environment": {
+        "download_ngrams_for_langs": "en",
+        "JAVA_XMS": "256m",
+        "JAVA_XMX": "1536m"
+      },
       "volumes": [
         {
           "hostPath": "${APP_DATA_DIR}/data/ngrams",
