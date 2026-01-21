@@ -1,0 +1,20 @@
+{
+  "name": "LanguageTool",
+  "available": true,
+  "exposable": true,
+  "dynamic_config": true,
+  "port": 8081,
+  "tipi_version": 16,
+  "version": "6.1",
+  "id": "languagetool",
+  "categories": ["writing"],
+  "description": "LanguageTool is a free online spell checker, style, and grammar checker that supports multiple languages. It helps you detect spelling errors, grammar issues, and style suggestions for your writing.",
+  "short_desc": "Free open-source grammar, spell, and style checker for multiple languages",
+  "author": "https://github.com/languagetoolorg/",
+  "source": "https://github.com/meyayl/docker-languagetool",
+  "form_fields": [],
+  "supported_architectures": ["arm64", "amd64"],
+  "created_at": 1737331200000,
+  "updated_at": 1737331200000,
+  "min_tipi_version": "4.5.0"
+}
