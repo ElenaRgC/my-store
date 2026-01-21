@@ -5,28 +5,13 @@
       "image": "crocodilestick/calibre-web-automated:latest",
       "isMain": true,
       "internalPort": 8083,
-      "environment": [
-        {
-          "key": "PUID",
-          "value": "1000"
-        },
-        {
-          "key": "PGID",
-          "value": "1000"
-        },
-        {
-          "key": "TZ",
-          "value": "${TZ}"
-        },
-        {
-          "key": "NETWORK_SHARE_MODE",
-          "value": "false"
-        },
-        {
-          "key": "HARDCOVER_TOKEN",
-          "value": "your_hardcover_api_key_here"
-        }
-      ],
+      "environment": {
+        "PUID": "1000",
+        "PGID": "1000",
+        "TZ": "${TZ}",
+        "NETWORK_SHARE_MODE": "false",
+        "HARDCOVER_TOKEN": "your_hardcover_api_key_here"
+      },
       "volumes": [
         {
           "hostPath": "${APP_DATA_DIR}/data/config",

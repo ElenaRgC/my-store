@@ -5,20 +5,11 @@
       "image": "ghcr.io/calibrain/shelfmark:latest",
       "isMain": true,
       "internalPort": 8084,
-      "environment": [
-        {
-          "key": "PUID",
-          "value": "1000"
-        },
-        {
-          "key": "PGID",
-          "value": "1000"
-        },
-        {
-          "key": "TZ",
-          "value": "${TZ}"
-        }
-      ],
+      "environment": {
+        "PUID": "1000",
+        "PGID": "1000",
+        "TZ": "${TZ}"
+      },
       "volumes": [
         {
           "hostPath": "${APP_DATA_DIR}/data/config",
